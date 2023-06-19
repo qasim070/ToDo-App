@@ -1,0 +1,22 @@
+#myMain{
+    height: auto;
+}
+button{
+    outline: none;
+}
+ul#list{
+    box-sizing: border-box;
+    list-style-type: none;
+}
+ul#list li{
+    margin: 10px 0;
+    display: flex;    
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+/* ul#list li button{
+    width: 20px;
+} */
+
+
+
