@@ -2,10 +2,10 @@ function addData(){
     
     let data = document.getElementById("toDo");
 
-    // if(data.value == ""){
-    //     alert("Value can not be empty");
+    if(data.value == ""){
+        alert("Value can not be empty");
       
-    // }else{
+    }else{
     
         let ul = document.getElementById("list");
         let createLi =  document.createElement("li");
@@ -29,7 +29,7 @@ function addData(){
         createDel.setAttribute("onclick" , "remove(this)")
 
         data.value = " ";
-    // }
+    }
 
 }
 
