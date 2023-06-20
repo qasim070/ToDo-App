@@ -1,7 +1,7 @@
 function addData(){
     
     let data = document.getElementById("toDo");
-// debugger
+    // debugger
     if(data.value.trim() == ""){
         alert("Value can not be empty");
       
@@ -9,9 +9,11 @@ function addData(){
     
         let ul = document.getElementById("list");
         let createLi =  document.createElement("li");
+        let createP =  document.createElement("p");
         createLi.setAttribute("id", "liText");
         ul.appendChild(createLi);
-        createLi.appendChild(document.createTextNode(data.value));
+        createLi.appendChild(createP);
+        createP.appendChild(document.createTextNode(data.value));
         
         // create edit button
         let createUp = document.createElement("button");
@@ -34,16 +36,24 @@ function addData(){
 }
 
 function remove(e){
-    if (confirm("Are you sure you want to delete?")) {
-        e.parentNode.remove();
+    e.parentNode.style.opacity = '0';
+    e.parentNode.style.backgroundColor = "#BD162C";
+    e.parentNode.style.color = "#fff";
+    
+    if (confirm("Are you sure you want to delete? " + e.parentNode.firstChild.innerHTML)) {
+        setTimeout(() => e.parentNode.remove(), 1000);
+        // e.parentNode.remove();
     }
 }
 
 function update(u){
     let newVal = u.parentNode.firstChild;
-    let newText = prompt("Enter the new text");
-    if(newText !== ""){
-        newVal.nodeValue = newText;
+    let oldVal = newVal.innerHTML;
+    let newText = prompt("Enter the new text" , oldVal);
+    if(newText.trim() !== ""){
+        newVal.innerHTML = newText;
+    }else{
+        alert("Please enter any value");
     }
     // alert(u.parentNode.textContent);
 }

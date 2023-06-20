@@ -8,15 +8,49 @@ ul#list{
     box-sizing: border-box;
     list-style-type: none;
 }
-ul#list li{
+ul#list li#liText{
     margin: 10px 0;
     display: flex;    
-    justify-content:space-evenly;
     flex-wrap: wrap;
+}
+ul#list li#liText p {
+    flex-grow: 15;
+}
+ul#list li#liText button{
+    flex-grow:1 ;
+    margin: 0px 10px;
+}
+
+#list li{
+    opacity: 1;
+    -webkit-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
+    padding: 10px 0;
+}
+ul#list{
+    padding: 0;
 }
 /* ul#list li button{
     width: 20px;
 } */
-
+@media only screen and (max-width:400px){
+    .card-header .add-responsive-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    ul#list li#liText{
+        border: 1px solid #eee;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    ul#list li#liText p {
+        flex-grow: 1;
+    }
+    ul#list li#liText button {
+        flex-grow: 1;
+        margin-top: 10px;
+    }
+}
 
 
