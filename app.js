@@ -1,8 +1,8 @@
 function addData(){
     
     let data = document.getElementById("toDo");
-
-    if(data.value == ""){
+// debugger
+    if(data.value.trim() == ""){
         alert("Value can not be empty");
       
     }else{
