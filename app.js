@@ -50,11 +50,13 @@ function update(u){
     let newVal = u.parentNode.firstChild;
     let oldVal = newVal.innerHTML;
     let newText = prompt("Enter the new text" , oldVal);
-    if(newText.trim() !== ""){
-        newVal.innerHTML = newText;
-    }else{
-        alert("Please enter any value");
-    }
+    // if(newText.trim() !== ""){
+    //     newVal.innerHTML = newText;
+    // }else{
+    //     alert("Please enter any value");
+    // }
+
     // alert(u.parentNode.textContent);
+    newText.trim() !== "" ? newVal.innerHTML = newText : alert("Please enter any value");    
 }
 
